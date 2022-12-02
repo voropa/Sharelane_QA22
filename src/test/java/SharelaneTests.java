@@ -28,10 +28,12 @@ public class SharelaneTests {
         zipCodeInput.sendKeys("12345");
         WebElement continueButton = driver.findElement(By.cssSelector("[value=Continue]"));
         continueButton.click();
+
         zipCodeInput = driver.findElement(By.name("zip_code"));
         Assert.assertEquals(zipCodeInput.isDisplayed(), false);
 
         WebElement firstNameInput = driver.findElement(By.name("first_name"));
         Assert.assertEquals(firstNameInput.isDisplayed(), true);
+        // some code here
     }
 }
